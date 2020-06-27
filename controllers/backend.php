@@ -28,21 +28,21 @@ function postAdmin()
 	require ('views/backend/commentgestionView.php');
 }
 
-function addPost($titre, $contenu) //add new content
-{   
-    UserManager::noSession();
+function addPost($titre, $contenu)
+{
+    try{
+
+        UserManager::noSession();
 	$postsManager = new PostsManager();
-	$affectedLines = $postsManager->insertPost($titre, $contenu); //var_dump($affectedLines);die;
-	//require ('views/backend/adminView.php');
-	if ($affectedLines === false) 
-	{
-    	die('Impossible d\'ajouter l\'article');
-    } 
-    else 
-    {
-    	header('Location: index.php?action=gestionPosts');
+        $affectedLines = $postsManager->insertPost($titre, $contenu);
+        header('Location: index.php?action=gestionPosts');
         exit();
-    }
+
+    }catch (Exception $e)
+	{
+        die('Erreur : '.$e->getMessage());
+    } 
+
 }
 
 function postEdition($id, $titre, $contenu)
