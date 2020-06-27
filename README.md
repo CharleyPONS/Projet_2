@@ -11,6 +11,6 @@ La partie d'administration du site est accessible par la barre de menu via l'ong
 Les identifiants pour y accèder sont :
 	
 	pseudo : Jean
-	mot de passe : 1234
+	mot de passe : 123456
 
 Ils sont modifiables directement dans la base de données, dans la table **membres**.
