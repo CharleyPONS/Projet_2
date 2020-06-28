@@ -4,7 +4,6 @@
 - Aller dans phpmyadmin pour administrer votre base MySQL et importez la base de donné **blogp3.sql**
 - Modifier la Class Manager avec vos informations de votre base de donnée
 - Lancer l'application
--lancer a nouveau l'application
 
 ## Administration
 
